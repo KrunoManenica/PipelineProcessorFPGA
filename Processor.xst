@@ -1,0 +1,5 @@
+set -tmpdir "/home/ise/project/PDS_seminar/seminar/xst/projnav.tmp"
+set -xsthdpdir "/home/ise/project/PDS_seminar/seminar/xst"
+elaborate
+-ifn Processor.prj
+-ifmt mixed

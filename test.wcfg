@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/ise/project/PDS_seminar/seminar/Processor_test_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="Processor_test" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="12" />
+   <wvobject fp_name="/Processor_test/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor_test/rst" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor_test/uut/IR1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">IR1[8:0]</obj_property>
+      <obj_property name="ObjectShortName">IR1[8:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor_test/uut/OP1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">OP1[3:0]</obj_property>
+      <obj_property name="ObjectShortName">OP1[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor_test/uut/OP2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">OP2[3:0]</obj_property>
+      <obj_property name="ObjectShortName">OP2[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor_test/uut/REG0" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">REG0[3:0]</obj_property>
+      <obj_property name="ObjectShortName">REG0[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor_test/uut/REG1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">REG1[3:0]</obj_property>
+      <obj_property name="ObjectShortName">REG1[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor_test/uut/REG2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">REG2[3:0]</obj_property>
+      <obj_property name="ObjectShortName">REG2[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor_test/uut/REG3" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">REG3[3:0]</obj_property>
+      <obj_property name="ObjectShortName">REG3[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor_test/uut/data_WE" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">data_WE</obj_property>
+      <obj_property name="ObjectShortName">data_WE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor_test/uut/data_mem/DI" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">DI[3:0]</obj_property>
+      <obj_property name="ObjectShortName">DI[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor_test/uut/data_mem/data_mem[15]" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">[15,3:0]</obj_property>
+      <obj_property name="ObjectShortName">data_mem[15,3:0]</obj_property>
+   </wvobject>
+</wave_config>
