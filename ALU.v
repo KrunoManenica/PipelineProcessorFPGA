@@ -21,7 +21,6 @@
 module ALU(
 	input [3:0] operand1, operand2,
 	input [2:0] mode,
-	// TODO: overflow flag
 	output [3:0] out
     );
 

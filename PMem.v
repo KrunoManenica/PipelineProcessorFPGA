@@ -26,7 +26,7 @@ module PMem(
 	reg [8:0] prog_mem [0:15];
 	
 	initial begin
-		$readmemb("programLC", prog_mem);
+		$readmemb("program2", prog_mem);
 	end
 	
 	assign instr = prog_mem[addr];

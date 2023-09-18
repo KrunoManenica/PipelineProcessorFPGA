@@ -20,11 +20,14 @@
 //////////////////////////////////////////////////////////////////////////////////
 module DMem(
 	input WE, clk,
-	input [3:0] addr, DI,
-	output [3:0] DO
+	input [3:0] addr, DI, doutadr,
+	output [3:0] DO, dout
     );
 
 	reg [3:0] data_mem [0:15];
+	
+	
+	assign dout = data_mem[doutadr];
 	
 	initial begin
 		$readmemb("initialData.dat", data_mem);

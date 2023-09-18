@@ -1,18 +1,16 @@
-Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o /home/ise/project/PDS_seminar/seminar/Processor_test_isim_beh.exe -prj /home/ise/project/PDS_seminar/seminar/Processor_test_beh.prj work.Processor_test work.glbl 
-ISim P.20131013 (signature 0xfbc00daa)
-Number of CPUs detected in this system: 1
-Turning on mult-threading, number of parallel sub-compilation jobs: 0 
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "C:/Users/Student/Documents/km/seminar/Processor_test_isim_beh.exe" -prj "C:/Users/Student/Documents/km/seminar/Processor_test_beh.prj" "work.Processor_test" "work.glbl" 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
-Analyzing Verilog file "/home/ise/project/PDS_seminar/seminar/PMem.v" into library work
-Analyzing Verilog file "/home/ise/project/PDS_seminar/seminar/DMem.v" into library work
-Analyzing Verilog file "/home/ise/project/PDS_seminar/seminar/ALU.v" into library work
-Analyzing Verilog file "/home/ise/project/PDS_seminar/seminar/Processor.v" into library work
-Analyzing Verilog file "/home/ise/project/PDS_seminar/seminar/Processor_test.v" into library work
-Analyzing Verilog file "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Analyzing Verilog file "C:/Users/Student/Documents/km/seminar/PMem.v" into library work
+Analyzing Verilog file "C:/Users/Student/Documents/km/seminar/DMem.v" into library work
+Analyzing Verilog file "C:/Users/Student/Documents/km/seminar/ALU.v" into library work
+Analyzing Verilog file "C:/Users/Student/Documents/km/seminar/Processor.v" into library work
+Analyzing Verilog file "C:/Users/Student/Documents/km/seminar/Processor_test.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 94924 KB
-Fuse CPU Usage: 500 ms
 Compiling module ALU
 Compiling module PMem
 Compiling module DMem
@@ -20,8 +18,8 @@ Compiling module Processor
 Compiling module Processor_test
 Compiling module glbl
 Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
 Compiled 6 Verilog Units
-Built simulation executable /home/ise/project/PDS_seminar/seminar/Processor_test_isim_beh.exe
-Fuse Memory Usage: 98072 KB
-Fuse CPU Usage: 510 ms
-GCC CPU Usage: 280 ms
+Built simulation executable C:/Users/Student/Documents/km/seminar/Processor_test_isim_beh.exe
+Fuse Memory Usage: 27344 KB
+Fuse CPU Usage: 452 ms

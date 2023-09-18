@@ -19,7 +19,9 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module Processor(
-	input clk, rst
+	input clk_sporki, rst_sporki, clk50, // clk = east, reset = south....oba treba debouncati
+	input [3:0] adr, // 4 switcha
+	output [3:0] d_out, pc_out // 4 ledice
     );
 	 
 	parameter LOAD = 3'b010, ADD = 3'b001, STORE = 3'b011, LOADC = 3'b100;
@@ -30,18 +32,25 @@ module Processor(
 	reg [3:0] OP1, OP2, ACC, dr_in;
 	reg [8:0] IR1, IR2, IR3;
 	reg [3:0] REG0, REG1, REG2, REG3;
+	wire clk, rst;
 	
+	debounce debounce1(clk_sporki, clk50, clk);
+	debounce debounce2(rst_sporki, clk50, rst);
 	ALU alu_unit(.operand1(OP1), .operand2(OP2), .mode(IR2[8:6]), .out(acc));
 	PMem prog_mem(.addr(PC), .instr(ir1_wire));
-	DMem data_mem(.WE(data_WE), .clk(clk), .addr(ACC), .DI(dr_in), .DO(dr_out));
+	DMem data_mem(.WE(data_WE), .clk(clk), .addr(ACC), .DI(dr_in), .DO(dr_out), .dout(d_out), .doutadr(adr));
+	assign pc_out = PC;
 	
 	// FETCH
-	always@(posedge clk) begin
-		if (rst)
-			PC = 0;
-		if (PC < 15) // after PC hits 15, process stops to verify results
+	always@(posedge clk or posedge rst) begin
+		if (rst) begin
+			PC <= 0;
+			IR1 <= ir1_wire;
+		end
+		else if (PC < 15) begin // after PC hits 15, process stops to verify results
 			PC <= PC + 1;
-		IR1 <= ir1_wire;
+			IR1 <= ir1_wire;
+		end
 	end
 	
 	// DECODE
@@ -91,6 +100,8 @@ module Processor(
 			endcase
 			data_WE <= 1;
 		end
+		else
+			data_WE <= 0;
 	end
 	
 	// STORE
@@ -111,7 +122,7 @@ module Processor(
 							//	2 : dr_in <= REG2;
 							//	3 : dr_in <= REG3;
 							//endcase
-							data_WE <= 0;
+							//data_WE <= 0;
 						end
 			ADD : 	begin
 							case(IR3[5:4]) // REG[IR3[5:4]] <= ACC;

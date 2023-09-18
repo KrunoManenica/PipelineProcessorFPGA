@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "/home/ise/project/PDS_seminar/seminar/Processor_test_isim_beh.exe" -prj "/home/ise/project/PDS_seminar/seminar/Processor_test_beh.prj" "work.Processor_test" "work.glbl" 
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "C:/Users/Student/Documents/km/seminar/Processor_test_isim_beh.exe" -prj "C:/Users/Student/Documents/km/seminar/Processor_test_beh.prj" "work.Processor_test" "work.glbl" 
